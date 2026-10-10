@@ -124,7 +124,7 @@ const sample = JSON.parse(await readFile(join(sampleSite, "content.json"), "utf8
 async function agentMisses(change) {
   const dir = await mkdtemp(join(tmpdir(), "agent-view-"));
   try {
-    await buildSite(sampleSite, dir, { address: "https://ada-example.github.io/portfolio/" });
+    await buildSite(sampleSite, dir, { address: "https://bushra-muneer.github.io/portfolio_workshop/" });
     await change(dir);
     return await agentViewProblems(dir, sample);
   } finally {
@@ -176,7 +176,7 @@ test("what an agent sees: without a name in the content file, no structured data
     await cp(sampleSite, siteDir, { recursive: true });
     const { name, ...nameless } = sample;
     await writeFile(join(siteDir, "content.json"), JSON.stringify(nameless));
-    await buildSite(siteDir, join(dir, "built"), { address: "https://ada-example.github.io/portfolio/" });
+    await buildSite(siteDir, join(dir, "built"), { address: "https://bushra-muneer.github.io/portfolio_workshop/" });
     assert.deepEqual(await agentViewProblems(join(dir, "built"), nameless), []);
   } finally {
     await rm(dir, { recursive: true, force: true });

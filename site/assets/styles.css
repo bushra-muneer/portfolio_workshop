@@ -1,71 +1,407 @@
-/* Plain starting styles. The Developer role replaces them with the design brief. */
+/* Newsreader 1.003, SIL Open Font License 1.1: fonts/newsreader/OFL.txt */
+@font-face {
+  font-family: "Newsreader";
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("fonts/newsreader/newsreader-latin-wght-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Newsreader";
+  font-style: italic;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("fonts/newsreader/newsreader-latin-wght-italic.woff2") format("woff2");
+}
+
+/* Literata 3.103, SIL Open Font License 1.1: fonts/literata/OFL.txt */
+@font-face {
+  font-family: "Literata";
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url("fonts/literata/literata-latin-wght-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Literata";
+  font-style: italic;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url("fonts/literata/literata-latin-wght-italic.woff2") format("woff2");
+}
+
 :root {
   color-scheme: light dark;
-  --text: light-dark(#1b1b1f, #ececf1);
-  --muted: light-dark(#5a5a66, #a8a8b3);
-  --background: light-dark(#ffffff, #121216);
-  --accent: light-dark(#1a56db, #8fb2ff);
-  font-family: system-ui, sans-serif;
-  line-height: 1.6;
+  --background: light-dark(#f7f3ec, #1b1714);
+  --surface: light-dark(#eee7dc, #26201c);
+  --text: light-dark(#231e1a, #eee6dc);
+  --muted: light-dark(#675c52, #b3a698);
+  --accent: light-dark(#a8402f, #f0937d);
+  --on-accent: light-dark(#ffffff, #1b1714);
+  font-family: "Literata", Georgia, "Times New Roman", serif;
+  line-height: 1.65;
   color: var(--text);
   background: var(--background);
+  accent-color: var(--accent);
+  scrollbar-color: var(--muted) var(--background);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
+  min-inline-size: 0;
   margin: 0;
+  background: var(--background);
+}
+
+.skip-link {
+  position: absolute;
+  inset-block-start: 1rem;
+  inset-inline-start: 1rem;
+  z-index: 1;
+  padding: 0.5rem 0.75rem;
+  background: var(--surface);
+  color: var(--text);
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
 }
 
 main,
 footer {
-  max-width: 44rem;
+  inline-size: min(100% - 2.5rem, 38rem);
   margin-inline: auto;
-  padding: 2rem 1.25rem;
+}
+
+main {
+  padding-block: 3.5rem 4rem;
+}
+
+footer {
+  padding-block: 0 2rem;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+footer > a {
+  display: inline-block;
+  margin-block-end: 1rem;
+}
+
+#colophon {
+  max-inline-size: 34rem;
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-block: 0;
+  font-family: "Newsreader", Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
+h1 {
+  margin-block-start: 1.25rem;
+  font-size: 2.75rem;
+  letter-spacing: -0.015em;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 1.125rem;
+}
+
+p,
+li {
+  text-wrap: pretty;
+}
+
+p {
+  margin-block: 1rem 0;
 }
 
 a {
   color: var(--accent);
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 0.08em;
 }
 
-.headline,
-.period {
-  color: var(--muted);
+a:hover {
+  text-decoration: none;
 }
 
-.projects,
-.links,
-.cv-list {
-  list-style: none;
-  padding: 0;
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 0.2rem;
 }
 
-.project,
-.cv-list li {
-  margin-block-end: 1.5rem;
+.section + .section {
+  margin-block-start: 4rem;
+  padding-block-start: 1.5rem;
+  border-block-start: 1px solid color-mix(in srgb, var(--muted) 45%, transparent);
 }
 
-.project-links,
-.links,
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.skills {
-  padding: 0;
-  list-style: none;
+#bio {
+  padding-block-start: 0;
+  border-block-start: 0;
 }
 
 .photo {
+  display: block;
+  inline-size: 6rem;
+  block-size: 6rem;
   border-radius: 50%;
+  object-fit: cover;
 }
 
-.role,
-.type {
+.headline {
+  margin-block-start: 0.5rem;
   color: var(--muted);
+  font-family: "Newsreader", Georgia, "Times New Roman", serif;
+  font-size: 1.25rem;
+  font-style: italic;
+}
+
+.pitch {
+  max-inline-size: 34rem;
+  margin-block-start: 1.5rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.highlights,
+.facts,
+.projects,
+.links,
+.cv-list,
+.skills,
+.stats,
+.now,
+.events,
+.sessions,
+.certifications {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.highlights {
+  margin-block-start: 1.5rem;
+  padding-inline-start: 1.25rem;
+}
+
+.highlights li + li,
+.facts li + li {
+  margin-block-start: 0.5rem;
+}
+
+.availability {
+  margin-block-start: 1.5rem;
+}
+
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  margin-block-start: 1.5rem;
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+.fact-label {
+  color: var(--text);
+  font-weight: 600;
+}
+
+#bio > p:not(.headline):not(.pitch):not(.availability) {
+  margin-block-start: 1.5rem;
+}
+
+.projects > .project,
+.cv-list > li,
+.certifications > .certification,
+.event {
+  padding-block: 0 1.5rem;
+  border-block-end: 1px solid color-mix(in srgb, var(--muted) 35%, transparent);
+}
+
+.projects > .project + .project,
+.cv-list > li + li,
+.certifications > .certification + .certification,
+.event + .event {
+  padding-block-start: 1.5rem;
+}
+
+.project p {
+  margin-block-start: 0.75rem;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  margin-block-start: 1rem;
 }
 
 .project-image {
-  max-width: 100%;
-  height: auto;
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  margin-block-start: 1rem;
+}
+
+.case-study {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.5rem 1rem;
+  margin-block: 1rem 0;
+  font-size: 0.9375rem;
+}
+
+.case-study dt {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.case-study dd {
+  margin: 0;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+}
+
+.period,
+.role,
+.type,
+.credential-id {
+  color: var(--muted);
+  font-size: 0.9375rem;
+  font-variant-numeric: oldstyle-nums;
+}
+
+.cv-list {
+  margin-block-start: 1rem;
+}
+
+.cv-list + h3,
+#cv > h3 {
+  margin-block-start: 2rem;
+}
+
+.cv-list h4 {
+  font-size: 1.125rem;
+}
+
+.skills {
+  margin-block-start: 1rem;
+}
+
+.skills li {
+  display: inline;
+}
+
+.skills li:not(:last-child)::after {
+  content: ", ";
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.stat-value {
+  font-family: "Newsreader", Georgia, "Times New Roman", serif;
+  font-size: 2rem;
+}
+
+.stat-label {
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+.now,
+.events,
+.certifications {
+  margin-block-start: 1rem;
+}
+
+.events h3 {
+  margin-block: 2rem 1rem;
+}
+
+.event-badge,
+.session-badge {
+  font-size: inherit;
+}
+
+.sessions {
+  margin-block-start: 1rem;
+}
+
+.session + .session {
+  margin-block-start: 0.5rem;
+}
+
+.session-badge {
+  margin-inline-end: 0.75rem;
+}
+
+.event-badge .role,
+.session-badge .type {
+  margin-inline-start: 0.25rem;
+}
+
+.verify {
+  margin-block-start: 0.5rem;
+}
+
+@media (min-width: 48rem) {
+  main {
+    padding-block-start: 5rem;
+  }
+
+  h1 {
+    max-inline-size: 32rem;
+  }
+}
+
+@media (forced-colors: active) {
+  a:focus-visible {
+    outline: 2px solid currentColor;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }

@@ -1,79 +1,106 @@
 {
   "$schema": "./content.schema.json",
   "language": "en",
-  "name": "Ada Example",
-  "headline": "Frontend developer who likes fast, accessible web pages",
-  "photo": {
-    "src": "assets/avatar.svg",
-    "alt": "Ada Example's avatar: a simple drawing of a head and shoulders in two shades of grey"
-  },
-  "pitch": "I build small, fast websites that everyone can use, and I explain every choice in plain words.",
+  "name": "Bushra Muneer",
+  "headline": "Full stack developer building secure web and mobile applications",
+  "pitch": "I build secure end-to-end web and mobile applications with React, Flutter, Spring Boot, and AWS.",
   "highlights": [
-    { "text": "Every page I look after scores 100 for accessibility in Lighthouse" },
-    { "text": "Five years of teaching maths: I make technical choices easy to follow" },
-    { "text": "Two open-source projects on GitHub", "url": "https://github.com/octocat" }
+    { "text": "Built Flutter applications serving more than 5,000 users" },
+    { "text": "Reduced average database query response time by about 40%" },
+    { "text": "Improved development and debugging efficiency by about 30% with AI-assisted workflows" }
   ],
   "availability": {
-    "text": "Open to junior frontend roles from January 2027.",
-    "actionLabel": "Write to me",
-    "actionUrl": "mailto:ada@example.com"
+    "text": "Available now for full stack developer roles, apprenticeships, traineeships, freelance projects, and professional connections.",
+    "actionLabel": "Email me",
+    "actionUrl": "mailto:bushraahmed302@gmail.com"
   },
-  "location": { "city": "Milan", "country": "Italy", "timeZone": "Europe/Rome" },
+  "location": { "city": "Genoa", "country": "Italy", "timeZone": "Europe/Rome" },
   "languages": [
-    { "name": "English", "level": "native" },
-    { "name": "Italian", "level": "B2" }
+    { "name": "English", "level": "C1" },
+    { "name": "Italian", "level": "A2" },
+    { "name": "Urdu", "level": "native" }
   ],
   "bio": [
-    "I build small, fast websites and the tools around them. Before I wrote code, I taught maths, so I still enjoy explaining things simply.",
-    "This is a sample portfolio of a fictional person. Replace it with your own story."
-  ],
-  "projects": [
-    {
-      "title": "Tide Tables",
-      "description": "A tiny web app that shows today's tides for a chosen harbour, built with plain HTML, CSS and JavaScript.",
-      "github": "https://github.com/octocat/Hello-World"
-    },
-    {
-      "title": "Reading Log",
-      "description": "A static site that lists the books I read, generated from one JSON file.",
-      "github": "https://github.com/octocat/Spoon-Knife",
-      "url": "https://octocat.github.io/Spoon-Knife/"
-    }
+    "I am a full stack developer with more than three years of experience building end-to-end web and mobile applications. I work across React, React Native, Flutter, Java Spring Boot, REST APIs, databases, and AWS, with a strong focus on secure, maintainable delivery.",
+    "My work includes a fintech platform with Flutter mobile apps, a React administration portal, and a Spring Boot backend; Digac, a Flutter and Firebase crypto tracker; Mantis Bug Tracker, a React Native collaboration app; and a Python machine-learning project for credit card fraud detection.",
+    "I am completing an M.Sc. in Software Security and Engineering at the University of Genoa, where my thesis focuses on automatic anonymization of user data using virtualization techniques. I am looking for full stack roles, apprenticeships, traineeships, freelance work, and opportunities to grow my professional network."
   ],
   "links": [
-    { "label": "GitHub", "url": "https://github.com/octocat" },
-    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/ada-example" },
-    { "label": "Email", "url": "mailto:ada@example.com" }
+    { "label": "GitHub", "url": "https://github.com/bushra-muneer" },
+    { "label": "LinkedIn", "url": "https://linkedin.com/in/bushra-muneer-a4b8731b4" },
+    { "label": "Email", "url": "mailto:bushraahmed302@gmail.com" },
+    { "label": "Phone", "url": "tel:+393482635162" }
   ],
   "cv": {
     "experience": [
       {
-        "role": "Junior Frontend Developer",
-        "organization": "Example Studio",
-        "start": "2024",
+        "role": "Software Developer",
+        "organization": "TechDrop / Creative Creation",
+        "start": "2025-02",
         "end": "present",
-        "summary": "Build and maintain marketing sites; brought every page to a Lighthouse accessibility score of 100."
+        "summary": "Build React web applications, Flutter mobile applications for Android and iOS, and fintech backend features with Spring Boot, REST APIs, AWS, and CI/CD."
       },
       {
-        "role": "Maths Teacher",
-        "organization": "Example Secondary School",
-        "start": "2019",
-        "end": "2024",
-        "summary": "Taught maths to students aged 11 to 16 and ran the after-school coding club."
+        "role": "Associate Software Engineer",
+        "organization": "Sibisoft / Northstar Technologies",
+        "start": "2022-10",
+        "end": "2023-09",
+        "summary": "Developed React Native features and REST API integrations, built an OAuth2/JWT SSO portal, improved database performance by about 40%, and supported a Flutter migration."
+      },
+      {
+        "role": "Development Trainee Officer",
+        "organization": "TPS Worldwide",
+        "start": "2022-02",
+        "end": "2022-09",
+        "summary": "Built Flutter mobile applications, reusable UI components, API integrations, and Flutter plugins that reduced repetitive development effort by about 20%."
+      },
+      {
+        "role": "Web Developer Intern",
+        "organization": "Technoflick Solutions",
+        "start": "2020-10",
+        "end": "2021-01",
+        "summary": "Built responsive websites with HTML, CSS, JavaScript, and Python and assisted with C# desktop application development."
       }
     ],
     "education": [
       {
-        "title": "Web Development Bootcamp",
-        "organization": "Example Academy",
-        "year": "2023"
+        "title": "M.Sc. Software Security & Engineering",
+        "organization": "University of Genoa, Italy",
+        "year": "2023-2026"
       },
       {
-        "title": "BSc Mathematics",
-        "organization": "Example University",
-        "year": "2018"
+        "title": "B.Sc. Computer Science",
+        "organization": "Karachi Institute of Economics and Technology (PAF-KIET)",
+        "year": "2018-2022"
       }
     ],
-    "skills": ["HTML", "CSS", "JavaScript", "Accessibility", "Git"]
+    "skills": [
+      "JavaScript",
+      "TypeScript",
+      "Python",
+      "Java",
+      "Dart",
+      "React",
+      "React Native",
+      "Flutter",
+      "Java Spring Boot",
+      "REST APIs",
+      "Microservices",
+      "OAuth2/JWT",
+      "Firebase",
+      "AWS",
+      "Docker",
+      "Kubernetes",
+      "CI/CD",
+      "Git",
+      "GitLab",
+      "JUnit",
+      "Jest",
+      "Agile/Scrum",
+      "SQL",
+      "PostgreSQL",
+      "GDPR compliance",
+      "Data anonymization"
+    ]
   }
 }

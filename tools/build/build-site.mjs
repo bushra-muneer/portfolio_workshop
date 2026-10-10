@@ -256,7 +256,7 @@ function ownHead(html) {
 
 // Every search engine and AI crawler may read every page. Crawlers look for
 // robots.txt at the root of a domain only, so on a site in a folder, such as
-// username.github.io/portfolio/, it counts once the site has a domain of its
+// username.github.io/portfolio_workshop/, it counts once the site has a domain of its
 // own; the sitemap's address can also be given to a search engine directly.
 const robotsTxt = (address) =>
   [
@@ -306,7 +306,7 @@ async function writeSite(siteDir, outDir, files, builtFiles) {
 }
 
 // Builds the site in siteDir into outDir. address is where the site is
-// published, such as https://ada-example.github.io/portfolio/, or null when
+// published, such as https://bushra-muneer.github.io/portfolio_workshop/, or null when
 // it is not known; today is the day as YYYY-MM-DD; commit, the commit the
 // site is built from, goes into version.txt. Throws a BuildError, before it
 // writes anything, when the site cannot be built. Returns the address, the

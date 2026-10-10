@@ -14,7 +14,7 @@ import { sampleSite } from "./fixture-site.js";
 import { withRepo } from "./participant-repo.js";
 import { loadsFromElsewhere } from "./site-files.js";
 
-const ADDRESS = "https://ada-example.github.io/portfolio/";
+const ADDRESS = "https://bushra-muneer.github.io/portfolio_workshop/";
 const sample = JSON.parse(await readFile(join(sampleSite, "content.json"), "utf8"));
 
 // A copy of the sample site, changed by change(siteDir), built into a folder
@@ -511,11 +511,11 @@ test("the site's address: a CNAME file first, then the repo GitHub Actions build
   try {
     const git = (...args) => assert.equal(spawnSync("git", args, { cwd: dir }).status, 0, args.join(" "));
     assert.equal(publicAddress(dir, {}), null);
-    assert.equal(publicAddress(dir, { GITHUB_REPOSITORY: "Ada-Example/portfolio" }), "https://ada-example.github.io/portfolio/");
+    assert.equal(publicAddress(dir, { GITHUB_REPOSITORY: "Ada-Example/portfolio" }), "https://bushra-muneer.github.io/portfolio_workshop/");
     assert.equal(publicAddress(dir, { GITHUB_REPOSITORY: "Ada-Example/Ada-Example.github.io" }), "https://ada-example.github.io/");
     git("init", "-q");
     git("remote", "add", "origin", "git@github.com:Ada-Example/portfolio.git");
-    assert.equal(publicAddress(dir, {}), "https://ada-example.github.io/portfolio/");
+    assert.equal(publicAddress(dir, {}), "https://bushra-muneer.github.io/portfolio_workshop/");
     await writeFile(join(dir, "CNAME"), "\nwww.ada-example.dev\n");
     assert.equal(publicAddress(dir, { GITHUB_REPOSITORY: "Ada-Example/portfolio" }), "https://www.ada-example.dev/");
   } finally {

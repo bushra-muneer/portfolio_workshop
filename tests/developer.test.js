@@ -77,7 +77,7 @@ test("the finder of outside loads catches a Google font and a CDN script", async
     await writeFile(join(dir, "main.js"), 'import confetti from "https://cdn.example.com/confetti.js";');
     await writeFile(join(dir, "photo.html"), '<img alt="" src="me.jpg" srcset="me.jpg 1x, https://cdn.example.com/me@2x.jpg 2x">');
     // The canonical link and a link preview's image only name an address; the page loads neither.
-    await writeFile(join(dir, "head.html"), '<link rel="canonical" href="https://ada-example.github.io/portfolio/"><meta property="og:image" content="https://ada-example.github.io/portfolio/assets/me.webp">');
+    await writeFile(join(dir, "head.html"), '<link rel="canonical" href="https://bushra-muneer.github.io/portfolio_workshop/"><meta property="og:image" content="https://bushra-muneer.github.io/portfolio_workshop/assets/me.webp">');
     assert.equal((await loadsFromElsewhere(dir)).length, 4);
   } finally {
     await rm(dir, { recursive: true, force: true });

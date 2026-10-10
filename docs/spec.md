@@ -1,27 +1,30 @@
 # Site spec
 
-Written by the Analyst from: interview. This is the spec of the sample person, Ada Example, who is fictional. The Analyst role replaces it with yours.
+Written by the Analyst from: CV and LinkedIn text.
 
 ## Who
-Ada Example, frontend developer who likes fast, accessible web pages.
+Bushra Muneer, a full stack developer building secure web and mobile applications with React, Flutter, Java Spring Boot, REST APIs, and AWS.
 
 ## For whom
-Recruiters and teams hiring a junior frontend developer.
+Recruiters and engineering teams hiring full stack developers, apprenticeship or traineeship candidates, freelance clients, and professional connections.
 
 ## What a visitor should do
-Look at the projects on GitHub, then write an email.
+Review Bushra's technical experience and impact, then email her, call her, connect on LinkedIn, or view her GitHub profile.
 
 ## Language
 English (en).
 
 ## Sections
-- Bio: two paragraphs.
-- Projects: two.
-- Links: GitHub, LinkedIn, email.
-- CV: experience, education and skills.
+- Bio: three paragraphs covering full stack experience, selected projects, security studies, and availability.
+- Links: GitHub, LinkedIn, email, and phone.
+- CV: experience, education, and technical skills.
+- Highlights: user impact, performance improvements, and development efficiency.
 
 ## Left out on purpose
-Nothing.
+- Dedicated project cards are left out until the exact public repository URLs are confirmed. The project descriptions remain in the bio.
+- Certifications and events were not supplied.
+- Postal address and VAT number were not supplied, so they are not included in the legal data.
 
 ## Later
-A blog, as an optional module.
+- Add confirmed GitHub repository links for the Fintech Platform, Digac Crypto Tracker, Mantis Bug Tracker, and Credit Card Fraud Detection.
+- Add a professional photo through the photo tool if desired.

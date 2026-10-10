@@ -69,7 +69,7 @@ async function onlineSite(repo, change = async () => {}) {
     await writeFile(target, spawnSync("git", ["show", `HEAD:${path}`], { cwd: repo }).stdout);
   }
   const online = join(dir, "online");
-  await buildSite(committed, online, { address: "https://ada-example.github.io/portfolio/", commit: git(repo, "rev-parse", "HEAD") });
+  await buildSite(committed, online, { address: "https://bushra-muneer.github.io/portfolio_workshop/", commit: git(repo, "rev-parse", "HEAD") });
   await change(online);
   const server = await serveSite(online);
   return { url: `${server.origin}/`, close: async () => (server.close(), rm(dir, { recursive: true, force: true })) };

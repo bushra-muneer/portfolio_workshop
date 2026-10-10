@@ -58,12 +58,12 @@ Shall I publish these changes? Say **yes**.
 
 **Agent:** Good! Your changes are pushed to GitHub. Now let me wait for your site to go live:
 
-**Agent:** Your site's address will be: **https://ada-example.github.io/portfolio/**
+**Agent:** Your site's address will be: **https://bushra-muneer.github.io/portfolio_workshop/**
 
 But first, we need to switch on GitHub Pages for your repo — this is a one-time setup.
 
 Open this address in Chrome:
-https://github.com/ada-example/portfolio/settings/pages
+https://github.com/ada-example/portfolio_workshop/settings/pages
 
 Then, under "Build and deployment", find the dropdown that says **Source** and change it to **GitHub Actions**.
 
@@ -79,7 +79,7 @@ Tell me when that's done.
 
 **Agent:** Your site is live! Here's what you need to know:
 
-**Your site address:** https://ada-example.github.io/portfolio/
+**Your site address:** https://bushra-muneer.github.io/portfolio_workshop/
 
 You can share this link now.
 
